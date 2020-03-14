@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS book;
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE book (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  isbn INTEGER,
+  title TEXT,
+  auther TEXT,
+  publisher TEXT,
+  location TEXT
+);
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
